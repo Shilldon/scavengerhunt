@@ -11,3 +11,30 @@
           height: 100%;
       }
       
+      #centre-map-button {
+            position: absolute;
+            top:5px;
+            left:5px;
+      }
+      
+      #help-button {
+            position: absolute;
+            top:5px;
+            right:5px;
+           
+      }
+      
+      #increase-range-button {
+            position: absolute;
+            top:80px;
+            right:5px;
+           
+      }      
+      
+      #decrease-range-button {
+            position: absolute;
+            top:125px;
+            right:5px;
+           
+      }      
+            
