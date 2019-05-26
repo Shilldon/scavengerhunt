@@ -9,30 +9,35 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Jim+Nightshade&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-fullscreen-plugin/1.1.4/jquery.fullscreen-min.js"></script>    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script type="text/javascript" src="assets/js/map.js"></script>
     <script type="text/javascript" src="assets/js/buttons.js"></script>
 
 </head>
 
 <body>
+    <div id="start">
+            <button type="button" class="btn btn-success" id="start-button">START</button>
+    </div>
     <div id="map"></div>
-    <button type="button" class="btn btn-success" id="centre-map-button">Centre on you</button>
-    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#help-modal" id="help-button"><i class="fa fa-question-circle" aria-hidden="true"></i></button>
-
     <button type="button" class="btn btn-warning" id="increase-range-button"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
     <button type="button" class="btn btn-success" id="decrease-range-button"><i class="fa fa-minus-circle" aria-hidden="true"></i></button>
+    <button type="button" class="btn btn-success" id="centre-map-button">CENTRE</button>
+    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#help-modal" id="help-button">HELP</button>
+    <div id="overlay-image"></div>
+
 
 
     <div class="modal fade" tabindex="-1" role="dialog" id="help-modal">
-    <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
                     <h5 class="modal-title">Information</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -41,14 +46,15 @@
                 <div class="modal-body">
                     <p>Your location is indicated by the blue pin.</p>
                     <p>Clues around town are indicated by red pins.</p>
-                    <p>In order to read the clue, tap on a red pin. If you are close enough (within 20 metres or so) the pin will turn green and the clue will be displayed. See if you can find the answer in the vicinity. Make a note and bring it back to the office with you.</p>
+                    <p>In order to read the clue, tap on a red pin. If you are close enough (within 20 metres or so) the pin will turn green and the clue will be displayed. See if you can find the answer in the vicinity. Make a note and bring it back to
+                        the office with you.</p>
                     <p>All answers to the clues are whole arabic numbers which are displayed on structures/signs/objects of note in town.</p>
                     <p>All clues are located outside, you do not need to go into any buildings to find them.</p>
                     <p>Once activated tapping on a pin will show the clue again no matter how far away you are from it.</p>
                     <p>Clues will continue to be displayed on the screen until you close them (press the cross on the clue) or until you tap on another pin.</p>
                     <p>You can scroll round the map by dragging your finger across it.</p>
                     <p>You can zoom in on the map by putting two fingers on the screen and dragging them apart. Reverse this action to zoom out.</p>
-                    <p>To re-centre the map on your location tap the green 'Centre on you' button.</p>
+                    <p>To re-centre the map on your location tap the green "CENTRE" button.</p>
                     <p>Good luck and happy hunting!</p>
                 </div>
                 <div class="modal-footer">
@@ -59,9 +65,9 @@
     </div>
 
     <div class="modal fade" tabindex="-1" role="dialog" id="range-modal">
-    <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
                     <h5 class="modal-title">Clue Range</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -77,9 +83,8 @@
         </div>
     </div>
 
-
+</div>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0UTwrPWlwTVB0qWHXeaZIRhpcwf8nP-U&callback=initMap"></script>
 </body>
 
 </html>
- 

@@ -1,6 +1,12 @@
+
+
 $(document).ready(function() { 
+
+            
+
 $("#centre-map-button").on("click", function() {
   centre();
+  setTimeout(function() { $('#dragon').focus()},1000);
 });
 
 $("#increase-range-button").on("click", function() {
@@ -10,5 +16,10 @@ $("#increase-range-button").on("click", function() {
 $("#decrease-range-button").on("click", function() {
   decreaseRange();
 });
+
+$("#start-button").on("click",function(){
+$(document).fullScreen(true); 
+$("#start").css("display","none");
+})
 
 })
