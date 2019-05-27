@@ -501,6 +501,8 @@ function follow() {
       scaledSize: new google.maps.Size(20, 27)
     };
     var myLatlng = new google.maps.LatLng(lat, long);
+    $(document).attr('lat',lat);
+    $(document).attr('lon',long);
     if (marker) {
       marker.setMap(null);
 
@@ -564,9 +566,10 @@ function getDistanceBetween(lat1, lon1, lat2, lon2) {
 
   var clueRange = $(document).attr("Range");
   if (clueRange == undefined) { clueRange = 20; };
+  /*
   $("#range-modal").modal('toggle');
   $("#rangeInfo").text("distance=" + d + " Clue range=" + clueRange);
-
+*/
   if (d <= clueRange) {
     return true;
   }
@@ -608,35 +611,63 @@ function drawMarker(markerInfo) {
     position: markerPosition,
     title: 'Clue',
     icon: {
-      url: 'assets/images/clue-position-flag-inactive.png',
-      scaledSize: new google.maps.Size(20, 35)
+      url: 'assets/images/clue-position-flag-inactive-large.png',
+      scaledSize: new google.maps.Size(50, 50)
     },
     question: markerInfo[0],
+    active: false
   });
 
   var lat2, lon2;
-
+/*
   marker.addListener('click', function() {
     //check if previous infowindow is open and, if so, close it
     navigator.geolocation.getCurrentPosition(function(pos) {
       var crd = pos.coords;
       lat2 = crd.latitude;
       lon2 = crd.longitude;
-      if (getDistanceBetween(markerInfo[1], markerInfo[2], lat2, lon2) == true) {
+      if (getDistanceBetween(markerInfo[1], markerInfo[2], lat2, lon2) == true || marker.active==true) {
         infoContent = "<div><p>Clue</p><p>" + marker.question + "</p>"
         marker.setIcon({
           url: 'assets/images/clue-position-flag-active.png',
           scaledSize: new google.maps.Size(25, 45)
         })
+        marker.active=true;
 
       }
       else {
-        infoContent = "<div><p>Clue</p><p>You need to move closer.</p>"
+        infoContent = "<div><p>Clue</p><p>You need to move closer.</p>"+marker.active;
 
       }
       showInfo(infoContent, marker);
 
     }, error, options);
+  });*/
+  
+    marker.addListener('click', function() {
+    //check if previous infowindow is open and, if so, close it
+    lon2=$(document).attr('lon');
+    lat2=$(document).attr('lat');
+    $('#click-sound')[0].play();
+    marker.setIcon({ url: 'assets/images/clue-position-flag-inactive-large-select.gif', scaledSize: new google.maps.Size(50, 50) })
+      if (getDistanceBetween(markerInfo[1], markerInfo[2], lat2, lon2) == true || marker.active==true) {
+        infoContent = "<div><p>Clue</p><p>" + marker.question + "</p></div>"
+        setTimeout(function () {marker.setIcon({
+          url: 'assets/images/clue-position-flag-active-large.png',
+          scaledSize: new google.maps.Size(50, 50)
+        })},800)
+        marker.active=true;
+
+      }
+      else {
+        setTimeout(function () {marker.setIcon({
+          url: 'assets/images/clue-position-flag-inactive-large.png',
+          scaledSize: new google.maps.Size(50, 50)
+        })},900)          
+        infoContent = "<div><p>You need to move closer.</p></div>";
+      }
+      showInfo(infoContent, marker);
+
   });
 
   marker.setMap(map);
@@ -657,13 +688,17 @@ function showInfo(infoContent, marker) {
   }
   previousInfoWindow = infowindow;
   infowindow.open(map, marker);
+  if(marker.active==false) {
+      setTimeout(function() { infowindow.close() },2500);
+  }
 }
 
+/*
 function increaseRange() {
   var currentRange = $(document).attr('Range');
   if (currentRange == undefined) { currentRange = 50; };
   console.log(currentRange)
-  currentRange += 10;
+  currentRange += 1000;
   $(document).attr('Range', currentRange);
   $("#range-modal").modal('toggle');
   $("#rangeInfo").text(currentRange);
@@ -673,9 +708,10 @@ function decreaseRange() {
   var currentRange = $(document).attr('Range');
   if (currentRange == undefined) { currentRange = 50; };
   console.log(currentRange)
-  currentRange -= 10;
+  currentRange -= 1000;
   $(document).attr('Range', currentRange);
   $("#range-modal").modal('toggle');
   $("#rangeInfo").text(currentRange);
 }
 
+*/

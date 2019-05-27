@@ -26,8 +26,8 @@
             <button type="button" class="btn btn-success" id="start-button">START</button>
     </div>
     <div id="map"></div>
-    <button type="button" class="btn btn-warning" id="increase-range-button"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
-    <button type="button" class="btn btn-success" id="decrease-range-button"><i class="fa fa-minus-circle" aria-hidden="true"></i></button>
+<!--    <button type="button" class="btn btn-warning" id="increase-range-button"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+    <button type="button" class="btn btn-success" id="decrease-range-button"><i class="fa fa-minus-circle" aria-hidden="true"></i></button>-->
     <button type="button" class="btn btn-success" id="centre-map-button">CENTRE</button>
     <button type="button" class="btn btn-info" data-toggle="modal" data-target="#help-modal" id="help-button">HELP</button>
     <div id="overlay-image"></div>
@@ -44,17 +44,17 @@
         </button>
                 </div>
                 <div class="modal-body">
-                    <p>Your location is indicated by the blue pin.</p>
-                    <p>Clues around town are indicated by red pins.</p>
-                    <p>In order to read the clue, tap on a red pin. If you are close enough (within 20 metres or so) the pin will turn green and the clue will be displayed. See if you can find the answer in the vicinity. Make a note and bring it back to
+                    <p>Your location is indicated by the blue magnifying glass.</p>
+                    <p>Clues around town are indicated by red flags.</p>
+                    <p>In order to read the clue, tap on a red flag. If you are close enough (within 20 metres or so) the flag will turn green and the clue will be displayed. See if you can find the answer in the vicinity. Make a note and bring it back to
                         the office with you.</p>
-                    <p>All answers to the clues are whole arabic numbers which are displayed on structures/signs/objects of note in town.</p>
+                    <p>All answers to the clues are numbers which are displayed on or calculated fomr (with very simple maths!) structures/signs/objects of note in town.</p>
                     <p>All clues are located outside, you do not need to go into any buildings to find them.</p>
-                    <p>Once activated tapping on a pin will show the clue again no matter how far away you are from it.</p>
-                    <p>Clues will continue to be displayed on the screen until you close them (press the cross on the clue) or until you tap on another pin.</p>
+                    <p>Once activated tapping on a flag will show the clue again no matter how far away you are from it.</p>
+                    <p>Clues will continue to be displayed on the screen until you close them (press the cross on the clue) or until you tap on another flag.</p>
                     <p>You can scroll round the map by dragging your finger across it.</p>
                     <p>You can zoom in on the map by putting two fingers on the screen and dragging them apart. Reverse this action to zoom out.</p>
-                    <p>To re-centre the map on your location tap the green "CENTRE" button.</p>
+                    <p>To re-centre the map on your location tap the "CENTRE" button at the top of the page.</p>
                     <p>Good luck and happy hunting!</p>
                 </div>
                 <div class="modal-footer">
@@ -82,7 +82,26 @@
             </div>
         </div>
     </div>
-
+    
+    <div class="modal fade" tabindex="-1" role="dialog" id="distance-modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Checking distance</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                </div>
+                <div class="modal-body">
+                    <p>Range=</p><span id="rangeInfo"></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <audio id="click-sound" src="assets/sounds/click.wav"></audio>
 </div>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0UTwrPWlwTVB0qWHXeaZIRhpcwf8nP-U&callback=initMap"></script>
 </body>

@@ -1,39 +1,39 @@
-question,latitude,longitude
-That's a lot of horses,51.4057,-1.324671
-In what year was the first official mobile phone call made to the Vodafone offices?,51.405687,-1.324777
-How far is it to London?,51.405651,-1.325071
-That rings a few bells.,51.404723,-1.324608
-When did Paul first come here?,51.403768,-1.323544
-How many exercise machines are there?,51.403713,-1.3221
-When did Mary Sampson sit here?,51.404086,-1.320813
-How long was her reign?,51.404481,-1.319593
-What time is the water switched off?,51.402933,-1.319796
-Marker number?,51.401961,-1.319459
-How long in metres is the Newbury barge?,51.402414,-1.321232
-When was the Royal Tournament?,51.401728,-1.320541
-How much does love cost?,51.401393,-1.322253
-When was this building repaired?,51.401236,-1.322585
-How far in feet did the old building protrude?,51.401236,-1.323796
-On what day of August was this stone installed?,51.401239,-1.323821
-Chapter?,51.401243,-1.32409
-When was Beynon established?,51.401297,-1.323464
-When was this axe first recorded?,51.400849,-1.322944
-How many spokes on the wheel?,51.400147,-1.323135
-Number of the empire?,51.399178,-1.322195
-How many miles of railway track were laid?,51.398471,-1.321291
-In what year was this building erected with the financial help of Andrew Carnegie?,51.39892,-1.321612
-When was this erected?,51.40064,-1.323071
-Newbury's age in 1996?,51.401198,-1.323601
-Robert Gilder was a very advanced age in what year?,51.4011,-1.324343
-When did the West Mills Brewery leave?,51.400748,-1.325988
-How many warehouses?,51.400778,-1.326393
-Don't drink here - it could be expensive,51.401441,-1.326186
-Seats of stone,51.401703,-1.325492
-When did Commander Higgins put in this stone?,51.402008,-1.325345
-When did they start Camping?,51.402446,-1.324255
-St. Michael since ...,51.403059,-1.324379
-Year of this globe?,51.403568,-1.325457
-Fantastic pizza,51.403615,-1.324674
-The best jewellery since when?,51.403735,-1.324653
-Number for the golden valley,51.406,-1.326878
-Flying visit but how long can you park for?,51.406689,-1.328041
+question,latitude,longitude,answer
+That's a lot of horses,51.4057,-1.324671,300
+In what year was the first official mobile phone call made to the Vodafone offices?,51.405687,-1.324777,1985
+How far is it to London?,51.405651,-1.325071,56
+"That rings a bell, but how many?",51.404723,-1.324608,3
+When did Paul first come here?,51.403768,-1.323544,1889
+How many exercise machines are there?,51.403713,-1.3221,8
+When did Mary Sampson sit here?,51.404086,-1.320813,2006
+How old is Vicky?,51.404481,-1.319593,82
+What time is the water switched off?,51.402933,-1.319796,5
+Marker number?,51.401961,-1.319459,4
+How long in metres is the Newbury barge?,51.402414,-1.321232,33
+When was the Royal Tournament?,51.401728,-1.320541,1248
+How much does love cost?,51.401393,-1.322253,0
+When was this building repaired?,51.401236,-1.322585,1902
+How far in feet did the old building protrude?,51.401236,-1.323796,16
+On what day of August was this stone installed?,51.401239,-1.323821,20
+"Fancy a drink, John? What chapter?",51.401243,-1.32409,4
+When was Beynon established?,51.401297,-1.323464,1827
+What year was this axe first recorded?,51.400849,-1.322944,1725
+How many spokes on the wheel?,51.400147,-1.323135,8
+Number of the empire?,51.399178,-1.322195,41424
+How many miles of railway track?,51.398471,-1.321291,37
+In what year was this building erected with the financial help of Andrew Carnegie?,51.39892,-1.321612,1905
+When was this erected?,51.40064,-1.323071,1861
+Newbury's age in 1996?,51.401198,-1.323601,400
+Robert Gilder was a very advanced age in what year?,51.4011,-1.324343,1842
+When did the West Mills Brewery leave?,51.400748,-1.325988,1920
+How many warehouses?,51.400778,-1.326393,3
+Don't drink here - it could be expensive,51.401441,-1.326186,500
+Seats of stone,51.401703,-1.325492,3
+When did Commander Higgins put in this stone?,51.402008,-1.325345,1893
+When did they start Camping?,51.402446,-1.324255,1921
+St. Michael since …,51.403059,-1.324379,1884
+Year of this globe?,51.403568,-1.325457,1987
+Fantastic pizza,51.403615,-1.324674,11
+The best jewellery since when?,51.403735,-1.324653,1923
+Number for the golden valley,51.406,-1.326878,47425
+Flying visit but how long can you stay?,51.406689,-1.328041,2
