@@ -564,8 +564,9 @@ function getDistanceBetween(lat1, lon1, lat2, lon2) {
   var d = R * c;
 
 
-  var clueRange = $(document).attr("Range");
-  if (clueRange == undefined) { clueRange = 20; };
+ // var clueRange = $(document).attr("Range");
+  //if (clueRange == undefined) { clueRange = 20; };
+  var clueRange=20;
   /*
   $("#range-modal").modal('toggle');
   $("#rangeInfo").text("distance=" + d + " Clue range=" + clueRange);
