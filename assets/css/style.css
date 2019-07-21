@@ -106,4 +106,60 @@ body {
   left: 50%;
   transform: translate(-50%, -50%); }
 
+#avenger-1 {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  width: 12.5%;
+  left: 0%; }
+
+#avenger-2 {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  width: 12.5%;
+  left: 12.5%; }
+
+#avenger-3 {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  width: 12.5%;
+  left: 25%; }
+
+#avenger-4 {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  width: 12.5%;
+  left: 37.5%; }
+
+#avenger-5 {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  width: 12.5%;
+  left: 50%; }
+
+#avenger-6 {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  width: 12.5%;
+  left: 62.5%; }
+
+#avenger-7 {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  width: 12.5%;
+  left: 75%; }
+
+#avenger-8 {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  width: 12.5%;
+  left: 87.5%; }
+
 /*# sourceMappingURL=style.css.map */

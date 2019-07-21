@@ -125,3 +125,13 @@
             transform: translate(-50%, -50%);
       }
       
+@for $i from 0 through 7{
+      #avenger-#{$i+1}
+      {
+            display:none;
+      position: absolute;
+      bottom:0;
+      width: 12.5%;
+      left:$i*12.5%;
+      }
+}
