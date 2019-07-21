@@ -658,12 +658,6 @@ function drawMarker(markerInfo) {
           scaledSize: new google.maps.Size(50, 50)
         })},800)
         marker.active=true;
-        var totalAvengers=$("#avenger-box").attr("total_avengers")
-        alert(totalAvengers)
-        var iAvenger=Math.floor((Math.random()*totalAvengers)+1);
-        alert(iAvenger)
-        $("#avenger-"+iAvenger).show();
-
       }
       else {
         setTimeout(function () {marker.setIcon({
