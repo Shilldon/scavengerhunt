@@ -658,7 +658,7 @@ function drawMarker(markerInfo) {
           scaledSize: new google.maps.Size(50, 50)
         })},800)
         marker.active=true;
-        var totalAvengers=$(document).attr("total_avengers")
+        var totalAvengers=$("#avenger-box").attr("total_avengers")
         var iAvenger=Math.floor((Math.random()*totalAvengers)+1);
         $("#avenger-"+iAvenger).show();
 
