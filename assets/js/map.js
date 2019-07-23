@@ -652,7 +652,7 @@ function drawMarker(markerInfo) {
     lon2=$(document).attr('lon');
     lat2=$(document).attr('lat');
     $('#click-sound')[0].play();
-    
+        clueRange = $(document).attr("Range");
     marker.setIcon({ url: 'assets/images/clue-position-flag-inactive-large-select.gif', scaledSize: new google.maps.Size(50, 50) })
       if (getDistanceBetween(markerInfo[1], markerInfo[2], lat2, lon2) == true || marker.active==true) {
         infoContent = "<div><p>Clue</p><p>" + marker.question + "</p></div>"+clueRange
