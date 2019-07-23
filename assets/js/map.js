@@ -655,7 +655,7 @@ function drawMarker(markerInfo) {
         clueRange = $(document).attr("Range");
     marker.setIcon({ url: 'assets/images/clue-position-flag-inactive-large-select.gif', scaledSize: new google.maps.Size(50, 50) })
       if (getDistanceBetween(markerInfo[1], markerInfo[2], lat2, lon2) == true || marker.active==true) {
-        infoContent = "<div><p>Clue</p><p>" + marker.question + "</p></div>"+clueRange
+        infoContent = "<div><p>Clue</p><p>" + marker.question +clueRange + "</p></div>"
         setTimeout(function () {marker.setIcon({
           url: 'assets/images/clue-position-flag-active-large.png',
           scaledSize: new google.maps.Size(50, 50)
@@ -668,7 +668,7 @@ function drawMarker(markerInfo) {
           url: 'assets/images/clue-position-flag-inactive-large.png',
           scaledSize: new google.maps.Size(50, 50)
         })},900)          
-        infoContent = "<div><p>You need to move closer.</p></div>"+clueRange;
+        infoContent = "<div><p>You need to move closer."+clueRange+"</p></div>";
       }
       showInfo(infoContent, marker);
 
