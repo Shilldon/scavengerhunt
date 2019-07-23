@@ -566,13 +566,14 @@ function getDistanceBetween(lat1, lon1, lat2, lon2) {
 
   var clueRange = $(document).attr("Range");
   if (clueRange == undefined) { clueRange = 10; };
+  $(document).attr("Range",clueRange);
   //var clueRange=20;
   /*
   $("#range-modal").modal('toggle');
   $("#rangeInfo").text("distance=" + d + " Clue range=" + clueRange);
 */
   if (d <= clueRange) {
-      alert("clue range"+clueRange)
+      
     return true;
   }
   else {
@@ -651,9 +652,10 @@ function drawMarker(markerInfo) {
     lon2=$(document).attr('lon');
     lat2=$(document).attr('lat');
     $('#click-sound')[0].play();
+    
     marker.setIcon({ url: 'assets/images/clue-position-flag-inactive-large-select.gif', scaledSize: new google.maps.Size(50, 50) })
       if (getDistanceBetween(markerInfo[1], markerInfo[2], lat2, lon2) == true || marker.active==true) {
-        infoContent = "<div><p>Clue</p><p>" + marker.question + "</p></div>"
+        infoContent = "<div><p>Clue</p><p>" + marker.question + "</p></div>"+clueRange
         setTimeout(function () {marker.setIcon({
           url: 'assets/images/clue-position-flag-active-large.png',
           scaledSize: new google.maps.Size(50, 50)
@@ -666,7 +668,7 @@ function drawMarker(markerInfo) {
           url: 'assets/images/clue-position-flag-inactive-large.png',
           scaledSize: new google.maps.Size(50, 50)
         })},900)          
-        infoContent = "<div><p>You need to move closer.</p></div>";
+        infoContent = "<div><p>You need to move closer.</p></div>"+clueRange;
       }
       showInfo(infoContent, marker);
 
