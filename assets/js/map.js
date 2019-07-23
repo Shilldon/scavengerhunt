@@ -652,32 +652,32 @@ function drawMarker(markerInfo) {
     lon2=$(document).attr('lon');
     lat2=$(document).attr('lat');
     $('#click-sound')[0].play();
-        clueRange = $(document).attr("Range");
     marker.setIcon({ url: 'assets/images/clue-position-flag-inactive-large-select.gif', scaledSize: new google.maps.Size(50, 50) })
       if (getDistanceBetween(markerInfo[1], markerInfo[2], lat2, lon2) == true || marker.active==true) {
-        infoContent = "<div><p>Clue</p><p>" + marker.question +clueRange + "</p></div>"
+          if(marker.active!=true) { findAvenger() }
+        infoContent = "<div><p>Clue</p><p>" + marker.question+"</p></div>"
         setTimeout(function () {marker.setIcon({
           url: 'assets/images/clue-position-flag-active-large.png',
           scaledSize: new google.maps.Size(50, 50)
         })},800)
         marker.active=true;
-        findAvenger();
       }
       else {
         setTimeout(function () {marker.setIcon({
           url: 'assets/images/clue-position-flag-inactive-large.png',
           scaledSize: new google.maps.Size(50, 50)
         })},900)          
-        infoContent = "<div><p>You need to move closer."+clueRange+"</p></div>";
+        infoContent = "<div><p>You need to move closer.</p></div>";
       }
       showInfo(infoContent, marker);
-
   });
 
   marker.setMap(map);
 }
 
 function findAvenger() {
+    var avengerChance=100;
+    if(Math.floor((Math.random()*100)+1)<=avengerChance) {
   var local_avengers=localStorage.getItem("avenger_list");
   var avengers;
 
@@ -699,6 +699,8 @@ function findAvenger() {
     setTimeout(function() { $('.full-avenger').show();  $('.full-avenger img').addClass("full-avenger-animate"); $('#avenger-'+avenger).fadeIn(1500); },500);
     setTimeout( function() { $('.full-avenger').removeClass("full-avenger-animate");$('.full-avenger').hide(); $('.full-avenger-text').hide();},3000);  
   }
+    }
+    return;
 }
 
 function error(err) {
