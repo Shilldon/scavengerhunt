@@ -572,6 +572,7 @@ function getDistanceBetween(lat1, lon1, lat2, lon2) {
   $("#rangeInfo").text("distance=" + d + " Clue range=" + clueRange);
 */
   if (d <= clueRange) {
+      alert("clue range"+clueRange)
     return true;
   }
   else {
