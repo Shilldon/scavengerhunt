@@ -124,4 +124,52 @@
             left: 50%;
             transform: translate(-50%, -50%);
       }
+      
+@for $i from 0 through 7{
+      #avenger-#{$i+1}
+      {
+      position: absolute;
+      bottom:0;
+      width: 12.5%;
+      left:$i*12.5%;
+      }
+}
+
+.full-avenger {
+      position:absolute;
+      display:none;
+      top:0;
+      left:50%;
+      top:50%;
+      height:400px;
+      transform:translate(-50%,-25%);
+      img {
+            max-height:50%;      
+      }
+
+}
+
+.full-avenger-text {
+      font-family: 'Marvel', sans-serif;
+      position:absolute;
+      display:none;
+      background-color:purple;
+      top:15%;
+      color:white;
+      font-size:2rem;
+      text-align:center;
+}
+
+.full-avenger-animate {
+      animation: 1.5s ease-in-out;
+      animation-name: animate-avenger;      
+}
+
+
+@keyframes animate-avenger {
+
+      0% {transform: scale(0,0) ;  }
+      50% {transform: scale(1.25,1.25) ; }
+      75% {transform: scale(0.8,0.8) ; }
+      100% {transform: scale(1.0,1.0) ; }
 }

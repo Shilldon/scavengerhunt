@@ -107,59 +107,86 @@ body {
   transform: translate(-50%, -50%); }
 
 #avenger-1 {
-  display: none;
   position: absolute;
   bottom: 0;
   width: 12.5%;
   left: 0%; }
 
 #avenger-2 {
-  display: none;
   position: absolute;
   bottom: 0;
   width: 12.5%;
   left: 12.5%; }
 
 #avenger-3 {
-  display: none;
   position: absolute;
   bottom: 0;
   width: 12.5%;
   left: 25%; }
 
 #avenger-4 {
-  display: none;
   position: absolute;
   bottom: 0;
   width: 12.5%;
   left: 37.5%; }
 
 #avenger-5 {
-  display: none;
   position: absolute;
   bottom: 0;
   width: 12.5%;
   left: 50%; }
 
 #avenger-6 {
-  display: none;
   position: absolute;
   bottom: 0;
   width: 12.5%;
   left: 62.5%; }
 
 #avenger-7 {
-  display: none;
   position: absolute;
   bottom: 0;
   width: 12.5%;
   left: 75%; }
 
 #avenger-8 {
-  display: none;
   position: absolute;
   bottom: 0;
   width: 12.5%;
   left: 87.5%; }
+
+.full-avenger {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 50%;
+  top: 50%;
+  height: 400px;
+  transform: translate(-50%, -25%); }
+  .full-avenger img {
+    max-height: 50%; }
+
+.full-avenger-text {
+  font-family: 'Marvel', sans-serif;
+  position: absolute;
+  display: none;
+  background-color: purple;
+  top: 15%;
+  color: white;
+  font-size: 2rem;
+  text-align: center; }
+
+.full-avenger-animate {
+  animation: 1.5s ease-in-out;
+  animation-name: animate-avenger; }
+
+@keyframes animate-avenger {
+  0% {
+    transform: scale(0, 0); }
+  50% {
+    transform: scale(1.25, 1.25); }
+  75% {
+    transform: scale(0.8, 0.8); }
+  100% {
+    transform: scale(1, 1); } }
 
 /*# sourceMappingURL=style.css.map */

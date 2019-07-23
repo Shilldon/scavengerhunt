@@ -565,7 +565,7 @@ function getDistanceBetween(lat1, lon1, lat2, lon2) {
 
 
   var clueRange = $(document).attr("Range");
-  if (clueRange == undefined) { clueRange = 20; };
+  if (clueRange == undefined) { clueRange = 10; };
   //var clueRange=20;
   /*
   $("#range-modal").modal('toggle');
@@ -658,6 +658,7 @@ function drawMarker(markerInfo) {
           scaledSize: new google.maps.Size(50, 50)
         })},800)
         marker.active=true;
+        findAvenger();
       }
       else {
         setTimeout(function () {marker.setIcon({
@@ -671,6 +672,30 @@ function drawMarker(markerInfo) {
   });
 
   marker.setMap(map);
+}
+
+function findAvenger() {
+  var local_avengers=localStorage.getItem("avenger_list");
+  var avengers;
+
+  if(local_avengers==undefined) {
+    avengers=[1,2,3,4,5,6,7,8];
+  }  
+  else{
+    avengers=JSON.parse(local_avengers);
+  }
+    var avengerLength=avengers.length;
+    if(avengerLength!=0) {
+    var avengerLocation=Math.floor((Math.random()*avengerLength));
+    var avenger=avengers[avengerLocation];
+    var avengerIndex=avengers.indexOf(avenger);
+    avengers.splice(avengerIndex,1);
+    localStorage.setItem("avenger_list",JSON.stringify(avengers));
+    $('.full-avenger img').attr('src','assets/images/avenger-full-'+avenger+'.png');
+    $('.full-avenger-text').fadeIn(250);
+    setTimeout(function() { $('.full-avenger').show();  $('.full-avenger img').addClass("full-avenger-animate"); $('#avenger-'+avenger).fadeIn(1500); },500);
+    setTimeout( function() { $('.full-avenger').removeClass("full-avenger-animate");$('.full-avenger').hide(); $('.full-avenger-text').hide();},3000);  
+  }
 }
 
 function error(err) {
