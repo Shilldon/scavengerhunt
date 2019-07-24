@@ -460,7 +460,7 @@ function follow() {
             strokeOpacity: 0
         });
 
-
+        circle.setMap(map);
         marker.setMap(map);
     };
 
