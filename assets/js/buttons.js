@@ -17,7 +17,7 @@ $(document).ready(function() {
   }
 
 $("#centre-map-button").on("click", function() {
-  //centre();
+  centre();
   //setTimeout(function() { $('#dragon').focus()},1000);
   
   //localStorage.removeItem('avenger_list');
