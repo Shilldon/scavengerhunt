@@ -516,7 +516,7 @@ function getDistanceBetween(lat1, lon1, lat2, lon2) {
 
 
     var clueRange = $(document).attr("Range");
-    if (clueRange == undefined) { clueRange = 15000; };
+    if (clueRange == undefined) { clueRange = 17; };
     $(document).attr("Range", clueRange);
     //var clueRange=20;
     /*
@@ -625,10 +625,7 @@ function drawMarker(markerInfo, markerNumber) {
                 })
             }, 800)
             if(marker.active!=true) {
-                console.log("marker not active")
             foundMarkersArray.push(markerNumber);
-            console.log("foundMarkers"+foundMarkersArray)
-            
             localStorage.setItem("found_markers", JSON.stringify(foundMarkersArray));
             marker.active = true;
             }
