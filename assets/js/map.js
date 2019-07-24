@@ -451,9 +451,9 @@ var circle = new google.maps.Circle({
     center: myLatlng,
     radius: 500,
     map: map,
-    fillColor: rgb(128,128,128),
+    fillColor: '#F5F5F5',
     fillOpacity: 0.5,
-    strokeColor: black,
+    strokeColor: '#F5F5F5',
     strokeOpacity: 0
 });
 
