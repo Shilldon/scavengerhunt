@@ -424,7 +424,6 @@ function centre() {
 
 function follow() {
     var win = function(position) {
-        var circle=$(document).attr("circle");
         var lat = position.coords.latitude;
         var long = position.coords.longitude;
         var accuracy = position.coords.accuracy;
