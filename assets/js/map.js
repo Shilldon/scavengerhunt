@@ -467,6 +467,10 @@ function follow() {
     var watchID = navigator.geolocation.watchPosition(win);
 }
 
+function resetZoom() {
+    map.setZoom(15);
+}
+
 function getData() {
     var data;
     $.ajax({

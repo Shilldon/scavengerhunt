@@ -25,6 +25,10 @@ $("#centre-map-button").on("click", function() {
   
 });
 
+$("#zoom-map-button").on("click", function() {
+  resetZoom();
+})
+
 $("#increase-range-button").on("click", function() {
   increaseRange();
 });

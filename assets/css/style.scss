@@ -66,6 +66,30 @@
             transform: scale(0.9, 0.9);
       }
 
+      #zoom-map-button {
+            z-index:1;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            font-family: 'Jim Nightshade', cursive;
+            font-size: 15px;
+            color: #212529;
+            background-color: #d6c3a3;
+            border: solid 3px;
+            border-color: rgba(0, 0, 0, .9);
+
+            transition: all 0.3s ease-out;
+            outline: none;
+            box-shadow: none;
+      }
+
+      #zoom-map-button:active {
+            outline: none;
+            box-shadow: none;
+            transform: scale(0.9, 0.9);
+      }
+
+
       #increase-range-button {
             z-index:1;
             position: absolute;
