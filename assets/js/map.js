@@ -449,6 +449,9 @@ function follow() {
             map: map,
             icon: iconimage
         });
+        if (circle) {
+            circle.setMap(null);
+        }
 var circle = new google.maps.Circle({
     center: myLatlng,
     radius: accuracy,
@@ -458,7 +461,7 @@ var circle = new google.maps.Circle({
     strokeColor: '#F5F5F5',
     strokeOpacity: 0
 });
-    $(document).attr("circle",circle);
+
 
         marker.setMap(map);
     };
