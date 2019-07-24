@@ -620,9 +620,11 @@ function drawMarker(markerInfo, markerNumber) {
                     scaledSize: new google.maps.Size(50, 50)
                 })
             }, 800)
+            if(marker.active!=true) {
+                console.log("marker not active")
             foundMarkersArray.push(markerNumber);
             console.log("foundMarkers"+foundMarkersArray)
-            if(marker.active!=true) {
+            
             localStorage.setItem("found_markers", JSON.stringify(foundMarkersArray));
             marker.active = true;
             }
