@@ -424,6 +424,8 @@ function centre() {
 
 function follow() {
     var win = function(position) {
+        var oldCircle=$(document).attr("circle");
+        oldCircle.setMap(null);
         var lat = position.coords.latitude;
         var long = position.coords.longitude;
         var accuracy = position.coords.accuracy;
@@ -456,6 +458,7 @@ var circle = new google.maps.Circle({
     strokeColor: '#F5F5F5',
     strokeOpacity: 0
 });
+    $(document).attr("circle",circle);
 
         marker.setMap(map);
     };
