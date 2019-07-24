@@ -619,6 +619,7 @@ function drawMarker(markerInfo, markerNumber) {
                 })
             }, 800)
             foundMarkersArray.push(markerNumber);
+            console.log("foundMarkers"+foundMarkersArray)
             localStorage.setItem("found_markers", JSON.stringify(foundMarkersArray));
             marker.active = true;
         }
