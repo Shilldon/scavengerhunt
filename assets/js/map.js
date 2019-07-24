@@ -563,6 +563,7 @@ function drawMarker(markerInfo, markerNumber) {
     if (foundMarkers != undefined) {
         foundMarkersArray = JSON.parse(foundMarkers);
     }
+    print("initial foundMarkers array "+foundMarkersArray)
     if (foundMarkersArray.indexOf(markerNumber) != -1) {
         foundMarker = true;
     }
