@@ -557,7 +557,6 @@ function drawIMMarker() {
 function drawMarker(markerInfo, markerNumber) {
 
     //put on clue markers
-    console.log(markerNumber)
     var foundMarkers = localStorage.getItem("found_markers")
     var foundMarkersArray=[];
     var foundMarker;
