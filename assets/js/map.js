@@ -448,7 +448,7 @@ function follow() {
             icon: iconimage
         });
 var circle = new google.maps.Circle({
-    center: centerPosition,
+    center: myLatlng,
     radius: accuracy,
     map: map,
     fillColor: red,
