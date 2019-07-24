@@ -449,9 +449,9 @@ function follow() {
         });
 var circle = new google.maps.Circle({
     center: myLatlng,
-    radius: 500,
+    radius: accuracy,
     map: map,
-    fillColor: '#F5F5F5',
+    fillColor: '#73C2FB',
     fillOpacity: 0.5,
     strokeColor: '#F5F5F5',
     strokeOpacity: 0
