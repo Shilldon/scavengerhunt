@@ -447,7 +447,6 @@ function follow() {
             map: map,
             icon: iconimage
         });
-        console.l
 var circle = new google.maps.Circle({
     center: myLatlng,
     radius: 500,
