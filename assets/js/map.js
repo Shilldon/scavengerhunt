@@ -452,15 +452,15 @@ function follow() {
         if (circle) {
             circle.setMap(null);
         }
-var circle = new google.maps.Circle({
-    center: myLatlng,
-    radius: accuracy,
-    map: map,
-    fillColor: '#73C2FB',
-    fillOpacity: 0.5,
-    strokeColor: '#F5F5F5',
-    strokeOpacity: 0
-});
+        circle = new google.maps.Circle({
+            center: myLatlng,
+            radius: accuracy,
+            map: map,
+            fillColor: '#73C2FB',
+            fillOpacity: 0.5,
+            strokeColor: '#F5F5F5',
+            strokeOpacity: 0
+        });
 
 
         marker.setMap(map);
