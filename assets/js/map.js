@@ -560,8 +560,8 @@ function drawMarker(markerInfo, markerNumber) {
     var foundMarkers = localStorage.getItem("found_markers")
     var foundMarkersArray;
     var foundMarker;
-    if (found_markers != undefined) {
-        foundMarkersArray = JSON.parse(local_avengers);
+    if (foundMarkers != undefined) {
+        foundMarkersArray = JSON.parse(foundMarkers);
     }
     if (foundMarkersArray.indexOf(markerNumber) != -1) {
         foundMarker = true;
