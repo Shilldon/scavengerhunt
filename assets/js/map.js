@@ -622,8 +622,10 @@ function drawMarker(markerInfo, markerNumber) {
             }, 800)
             foundMarkersArray.push(markerNumber);
             console.log("foundMarkers"+foundMarkersArray)
+            if(marker.active!=true) {
             localStorage.setItem("found_markers", JSON.stringify(foundMarkersArray));
             marker.active = true;
+            }
         }
         else {
             setTimeout(function() {
