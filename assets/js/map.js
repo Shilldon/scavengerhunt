@@ -516,7 +516,7 @@ function getDistanceBetween(lat1, lon1, lat2, lon2) {
 
 
     var clueRange = $(document).attr("Range");
-    if (clueRange == undefined) { clueRange = 15; };
+    if (clueRange == undefined) { clueRange = 15000; };
     $(document).attr("Range", clueRange);
     //var clueRange=20;
     /*
