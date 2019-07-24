@@ -563,8 +563,7 @@ function drawMarker(markerInfo, markerNumber) {
     if (foundMarkers != undefined) {
         foundMarkersArray = JSON.parse(foundMarkers);
     }
-    console.log("marker number="+markerNumber)
-    console.log("initial foundMarkers array "+foundMarkersArray)
+
     if (foundMarkersArray.indexOf(markerNumber) != -1) {
         foundMarker = true;
     }
@@ -607,6 +606,11 @@ function drawMarker(markerInfo, markerNumber) {
 
     marker.addListener('click', function() {
         //check if previous infowindow is open and, if so, close it
+        foundMarkers = localStorage.getItem("found_markers")
+        foundMarkersArray=[];  
+        if (foundMarkers != undefined) {
+            foundMarkersArray = JSON.parse(foundMarkers);
+        }    
         lon2 = $(document).attr('lon');
         lat2 = $(document).attr('lat');
         $('#click-sound')[0].play();
