@@ -451,7 +451,7 @@ var circle = new google.maps.Circle({
     center: myLatlng,
     radius: 500,
     map: map,
-    fillColor: red,
+    fillColor: rgb(128,128,128),
     fillOpacity: 0.5,
     strokeColor: black,
     strokeOpacity: 0
