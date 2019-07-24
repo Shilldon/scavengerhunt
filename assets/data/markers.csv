@@ -2,14 +2,14 @@ question,latitude,longitude,answer
 That's a lot of horses,51.405677,-1.324620,300
 In what year was the first official mobile phone call made to the Vodafone offices?,51.405670,-1.324815,1985
 How far is it to London?,51.405651,-1.325071,56
-That rings a bell - but how many?,51.404723,-1.324608,3
+That rings a bell - but can you gamble on how many?,51.404723,-1.324608,3
 When did Paul first come here?,51.403768,-1.323544,1889
 How many exercise machines are there?,51.403713,-1.3221,8
 When did Mary Sampson sit here?,51.404211,-1.320633,2006
 How old is Vicky?,51.404481,-1.319593,82
 What time is the water switched off?,51.402933,-1.319796,5
 Marker number?,51.401961,-1.319459,4
-How long in metres is the Newbury barge?,51.402414,-1.321232,33
+How long in metres was the Newbury barge?,51.402414,-1.321232,33
 When was the Royal Tournament?,51.4016573,-1.3208039,1248
 How much does love cost?,51.401400,-1.322275,0
 When was this building repaired?,51.401253,-1.322615,1902
@@ -37,3 +37,5 @@ What number is the fantastic pizza?,51.403615,-1.324674,11
 The best jewellery since when?,51.403735,-1.324653,1923
 Number for the golden valley,51.406,-1.326878,47425
 Flying visit but how long can you stay?,51.406689,-1.328041,2
+test,51.410608,-1.316478,0
+test2,51.410570,-1.316483,0

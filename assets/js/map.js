@@ -427,7 +427,7 @@ function follow() {
         var lat = position.coords.latitude;
         var long = position.coords.longitude;
         var accuracy = position.coords.accuracy;
-        
+
         var iconimage = {
             url: 'assets/images/user-position.png',
             size: new google.maps.Size(384, 720),
@@ -489,7 +489,7 @@ function getData() {
                     // here you have the colValue to play with
                     markerInfo.push(colValue);
                 }
-                drawMarker(markerInfo);
+                drawMarker(markerInfo, i);
             }
         }
     });
@@ -554,49 +554,54 @@ function drawIMMarker() {
     marker.setMap(map);
 }
 
-function drawMarker(markerInfo) {
+function drawMarker(markerInfo, markerNumber) {
 
     //put on clue markers
-
+    var foundMarkers = localStorage.getItem("found_markers")
+    var foundMarkersArray;
+    var foundMarker;
+    if (found_markers != undefined) {
+        foundMarkersArray = JSON.parse(local_avengers);
+    }
+    if (foundMarkersArray.indexOf(markerNumber) != -1) {
+        foundMarker = true;
+    }
+    else {
+        foundMarker = false;
+    }
 
     var markerPosition = new google.maps.LatLng(markerInfo[1], markerInfo[2]);
     //add data to marker
-    var marker = new google.maps.Marker({
-        position: markerPosition,
-        title: 'Clue',
-        icon: {
-            url: 'assets/images/clue-position-flag-inactive-large.png',
-            scaledSize: new google.maps.Size(50, 50)
-        },
-        question: markerInfo[0],
-        active: false
-    });
+    var marker;
+    if (foundMarker == false) {
+        marker = new google.maps.Marker({
+            position: markerPosition,
+            title: 'Clue',
+            icon: {
+                url: 'assets/images/clue-position-flag-inactive-large.png',
+                scaledSize: new google.maps.Size(50, 50)
+            },
+            question: markerInfo[0],
+            active: false,
+            number: markerNumber
+        });
+    }
+    else {
+        marker = new google.maps.Marker({
+            position: markerPosition,
+            title: 'Clue',
+            icon: {
+                url: 'assets/images/clue-position-flag-active-large.png',
+                scaledSize: new google.maps.Size(50, 50)
+            },
+            question: markerInfo[0],
+            active: true,
+            number: markerNumber
+        });
+    }
 
     var lat2, lon2;
-    /*
-      marker.addListener('click', function() {
-        //check if previous infowindow is open and, if so, close it
-        navigator.geolocation.getCurrentPosition(function(pos) {
-          var crd = pos.coords;
-          lat2 = crd.latitude;
-          lon2 = crd.longitude;
-          if (getDistanceBetween(markerInfo[1], markerInfo[2], lat2, lon2) == true || marker.active==true) {
-            infoContent = "<div><p>Clue</p><p>" + marker.question + "</p>"
-            marker.setIcon({
-              url: 'assets/images/clue-position-flag-active.png',
-              scaledSize: new google.maps.Size(25, 45)
-            })
-            marker.active=true;
 
-          }
-          else {
-            infoContent = "<div><p>Clue</p><p>You need to move closer.</p>"+marker.active;
-
-          }
-          showInfo(infoContent, marker);
-
-        }, error, options);
-      });*/
 
     marker.addListener('click', function() {
         //check if previous infowindow is open and, if so, close it
@@ -613,6 +618,8 @@ function drawMarker(markerInfo) {
                     scaledSize: new google.maps.Size(50, 50)
                 })
             }, 800)
+            foundMarkersArray.push(markerNumber);
+            localStorage.setItem("found_markers", JSON.stringify(foundMarkersArray));
             marker.active = true;
         }
         else {
@@ -651,12 +658,16 @@ function findAvenger() {
             localStorage.setItem("avenger_list", JSON.stringify(avengers));
             $('.full-avenger img').attr('src', 'assets/images/avenger-full-' + avenger + '.png');
             $('.full-avenger-text').fadeIn(250);
-            setTimeout(function() { $('.full-avenger').show();
+            setTimeout(function() {
+                $('.full-avenger').show();
                 $('.full-avenger img').addClass("full-avenger-animate");
-                $('#avenger-' + avenger).fadeIn(1500); }, 500);
-                setTimeout(function() { $('.full-avenger').removeClass("full-avenger-animate");
+                $('#avenger-' + avenger).fadeIn(1500);
+            }, 500);
+            setTimeout(function() {
+                $('.full-avenger').removeClass("full-avenger-animate");
                 $('.full-avenger').hide();
-                $('.full-avenger-text').hide(); }, 3000);
+                $('.full-avenger-text').hide();
+            }, 3000);
         }
     }
     return;
