@@ -461,7 +461,7 @@ function follow() {
         });
 
         circle.setMap(map);*/
-        $("#gps-accuracy").attr("height","200px");
+        $("#gps-accuracy").height(200);
         marker.setMap(map);
     };
 
