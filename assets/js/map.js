@@ -447,7 +447,7 @@ function follow() {
             map: map,
             icon: iconimage
         });
-        if (circle) {
+     /*   if (circle) {
             circle.setMap(null);
         }
         circle = new google.maps.Circle({
@@ -460,7 +460,8 @@ function follow() {
             strokeOpacity: 0
         });
 
-        circle.setMap(map);
+        circle.setMap(map);*/
+        $("#gps-accuracy").attr("height","200px");
         marker.setMap(map);
     };
 
