@@ -651,7 +651,7 @@ function drawMarker(markerInfo, markerNumber) {
 }
 
 function findAvenger() {
-    var avengerChance = 15;
+    var avengerChance = 20;
     if (Math.floor((Math.random() * 100) + 1) <= avengerChance) {
         var local_avengers = localStorage.getItem("avenger_list");
         var avengers;
