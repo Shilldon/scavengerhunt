@@ -459,8 +459,9 @@ function follow() {
             strokeColor: '#F5F5F5',
             strokeOpacity: 0
         });
-
+        
         circle.setMap(map);*/
+        console.log("accuracy "+accuracy);
         $("#gps-accuracy").height(200)
         marker.setMap(map);
     };
