@@ -461,7 +461,7 @@ function follow() {
         });
 
         circle.setMap(map);*/
-        $("#gps-accuracy").css("position:absolute; left:0; bottom:50px; background-color:red; width:25px; z-index:5; height:500px;")
+        $("#gps-accuracy").height(200)
         marker.setMap(map);
     };
 
