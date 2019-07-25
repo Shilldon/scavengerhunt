@@ -462,7 +462,9 @@ function follow() {
         
         circle.setMap(map);*/
         console.log("accuracy "+accuracy);
-        $("#gps-accuracy").height(200)
+        var accuracyDisplay=Math.floor(30/accuracy);
+        console.log("accuracy "+accuracyDisplay);
+        $("#gps-accuracy").height(accuracyDisplay)
         marker.setMap(map);
     };
 
