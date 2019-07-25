@@ -118,7 +118,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: black;
-  z-index: 2; }
+  z-index: 10; }
 
 #start-button {
   position: absolute;
