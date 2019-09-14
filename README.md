@@ -62,8 +62,11 @@ No automatic testing was undertaken but the page was tested in the field repeate
 
 #### Images credits:
 Compass - https://www.kisspng.com/png-north-compass-rose-clip-art-old-compas-map-turkey-2201619/download-png.html
+
 Dragon - https://ayoqq.org/explore/smaug-drawing-original/
+
 Parchment overlay - https://pixabay.com/vectors/scroll-parchment-old-305402/
+
 Map pin flags - adapted from https://pixabay.com/vectors/flag-place-location-marker-1295315/
 
 #### Sound credits:
